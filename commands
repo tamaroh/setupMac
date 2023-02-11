@@ -3,4 +3,11 @@
 eval "$(/usr/local/bin/brew shellenv)"
 brew search ----
 brew install --cask google-chrome
-brew install --cask visual-studio-code
+  visual-studio-code
+  zoom
+  microsoft-edge
+  vivaldi
+brew install nodebrew
+  /usr/local/opt/nodebrew/bin/nodebrew setup_dirs
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+nodebrew install stable

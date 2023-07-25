@@ -2,7 +2,7 @@
 (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/tamaroh/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
 brew search ----
-brew install --cask google-chrome visual-studio-code zoom microsoft-edge vivaldi 
+brew install --cask google-chrome visual-studio-code zoom microsoft-edge vivaldi discord slack
 brew install git nodebrew
   /usr/local/opt/nodebrew/bin/nodebrew setup_dirs
   export PATH=$HOME/.nodebrew/current/bin:$PATH

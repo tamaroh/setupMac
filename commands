@@ -3,9 +3,8 @@ xcode-select –-install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/tamaroh/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
-brew search ----
 brew install --cask google-chrome visual-studio-code zoom discord slack
-brew install git nvm postgresql
+brew install git gh nvm postgresql
 
 git config --global init.defaultBranch main
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

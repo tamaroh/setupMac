@@ -27,3 +27,6 @@ gh auth login
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 https://github.com/powerline/fonts
+
+# rosetta
+/usr/sbin/softwareupdate -install-rosetta -agree-to-license

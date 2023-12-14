@@ -33,4 +33,4 @@ https://github.com/powerline/fonts
 
 #chrimium
 brew install --cask chromium
-sudo spctl --master-disable
+xattr -rc /Applications/Chromium.app 

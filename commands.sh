@@ -30,3 +30,7 @@ https://github.com/powerline/fonts
 
 # rosetta
 /usr/sbin/softwareupdate -install-rosetta -agree-to-license
+
+#chrimium
+brew install --cask chromium
+sudo spctl --master-disable

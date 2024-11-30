@@ -103,3 +103,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+alias cl="clear"
+alias cr="code -r"
+
+# pnpm
+export PNPM_HOME="/Users/tamaroh/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+prompt_dir() {
+  # prompt_segment blue $CURRENT_FG '%~'
+  prompt_segment blue white '%~'
+}

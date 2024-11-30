@@ -34,3 +34,8 @@ https://github.com/powerline/fonts
 #chrimium
 brew install --cask chromium
 xattr -rc /Applications/Chromium.app 
+
+# edit postgres password setting if needed
+psql > alter user tamaroh with password 'pasword';
+code /opt/homebrew/var/postgresql@14/pg_hba.conf
+trust > scram-sha-256

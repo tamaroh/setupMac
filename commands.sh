@@ -1,7 +1,4 @@
-# ssh
-ssh-keygen -t ed25519 -C "tamaroh@gmail.com"
-pbcopy < ~/.ssh/id_rsa.pub
-# paste on github.com setting
+
 
 # xcode developer tool
 xcode-select --install
@@ -12,30 +9,38 @@ xcode-select --install
 eval "$(/usr/local/bin/brew shellenv)"
 
 brew install --cask google-chrome visual-studio-code zoom discord slack
-brew install git gh nvm postgresql
-# nvm needs some more setup, read the document after installed
+brew install git gh
 
-# git
+# edit git config
 git config --global init.defaultBranch main
 git config --global user.name "Tamaroh"
 git config --global user.email "tamaroh@gmail.com"
 
 # gh
 gh auth login
+# ssh, if set manually
+# ssh-keygen -t ed25519 -C "tamaroh@gmail.com"
+# pbcopy < ~/.ssh/id_rsa.pub
+# paste on github.com setting
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-https://github.com/powerline/fonts
+brew install nvm
+# nvm needs some more setup, read the document after installed
+nvm install --lts
 
-# rosetta
-/usr/sbin/softwareupdate -install-rosetta -agree-to-license
-
-#chrimium
-brew install --cask chromium
-xattr -rc /Applications/Chromium.app 
-
+brew install postgresql@14
+brew services start postgresql@14
 # edit postgres password setting if needed
 psql > alter user tamaroh with password 'pasword';
 code /opt/homebrew/var/postgresql@14/pg_hba.conf
 trust > scram-sha-256
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# https://github.com/powerline/fonts
+brew install font-hackgen-nerd
+
+# rosetta, this may be installed automatically when needed
+/usr/sbin/softwareupdate -install-rosetta -agree-to-license
+
+

@@ -8,7 +8,7 @@ xcode-select --install
 (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/tamaroh/.zprofile
 eval "$(/usr/local/bin/brew shellenv)"
 
-brew install --cask google-chrome visual-studio-code zoom discord slack
+brew install --cask google-chrome visual-studio-code zoom discord slack notion
 brew install git gh
 
 # edit git config

@@ -23,6 +23,12 @@ gh auth login
 # pbcopy < ~/.ssh/id_rsa.pub
 # paste on github.com setting
 
+# set pass phrase autpmatic
+ssh-add
+touch ~/.ssh/config
+  Host *
+  UseKeychain yes
+
 brew install nvm
 # nvm needs some more setup, read the document after installed
 nvm install --lts

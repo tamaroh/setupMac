@@ -29,8 +29,9 @@ touch ~/.ssh/config
   Host *
   UseKeychain yes
 
-brew install nvm
-# nvm needs some more setup, read the document after installed
+# install nvm (brew is not supported)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.zshrc
 nvm install --lts
 
 brew install postgresql@14
